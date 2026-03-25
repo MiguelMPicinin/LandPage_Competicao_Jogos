@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game System | Cenário Competitivo de Esports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========== ADIÇÕES PARA IMAGENS MAIS LARGAS EM DESKTOP ========== */
+        @media (min-width: 1024px) {
+            .presentation .images-row {
+                gap: 2rem;
+            }
+            .presentation .img-card {
+                flex: 1 1 45%;
+                max-width: 550px;
+            }
+            .presentation .img-card img {
+                aspect-ratio: 16/9;
+                max-height: 320px;
+                object-fit: cover;
+            }
+            .presentation .card-label {
+                font-size: 0.9rem;
+                margin-top: 1rem;
+            }
+            .presentation .img-card p:not(.card-label) {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">🎮</div>
+            <h1 class="logo-text">Game System</h1>
+        </div>
+        <nav class="nav-desktop">
+            <a href="#">Início</a>
+            <a href="#">Games</a>
+            <a href="#">E-Sports</a>
+            <a href="#">Cenário</a>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    </header>
+
+    <!-- NAV MOBILE -->
+    <nav class="nav-mobile" id="navMobile">
+        <a href="#" onclick="toggleMenu()">Início</a>
+        <a href="#" onclick="toggleMenu()">Games</a>
+        <a href="#" onclick="toggleMenu()">E-Sports</a>
+        <a href="#" onclick="toggleMenu()">Cenário</a>
+    </nav>
+
+    <!-- HERO PRINCIPAL -->
+    <section class="hero-main">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-sub">Bem-vindo ao</p>
+            <h2 class="hero-title">GAME SYSTEM</h2>
+            <div class="hero-btn">▶ PLAY ◀</div>
+        </div>
+        <div class="hero-corner corner-tl"></div>
+        <div class="hero-corner corner-tr"></div>
+        <div class="hero-corner corner-bl"></div>
+        <div class="hero-corner corner-br"></div>
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400" alt="Gaming Hero" class="hero-bg-img">
+    </section>
+
+    <!-- INTRODUÇÃO (com história do primeiro torneio) -->
+    <section class="intro-section">
+        <div class="left">
+            <h2 class="section-title">A história dos esports</h2>
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600" alt="Primeiro torneio de games" class="intro-img">
+            <p style="margin-top: 16px; color: #aaaaaa;">O primeiro torneio de videogame aconteceu em <strong>1972</strong>, na Universidade de Stanford, com o jogo <strong>Spacewar!</strong>. Chamado de <strong>Intergalactic Spacewar Olympics</strong>, o campeonato reuniu estudantes e marcou o início da cultura competitiva. Com a chegada da internet banda larga nos anos 2000, surgiram ligas profissionais e plataformas como a Twitch, transformando os e-sports em um fenômeno global que hoje movimenta bilhões de dólares.</p>
+        </div>
+        <div class="right">
+            <div class="topic">
+                <div class="topic-num">1</div>
+                <div class="topic-body">
+                    <h3>FPS (First-Person Shooter)</h3>
+                    <p>Gênero onde o jogador enxerga pelos olhos do personagem e utiliza armas em combates rápidos. A competitividade exige reflexos apurados, mira precisa e trabalho em equipe.</p>
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-num">2</div>
+                <div class="topic-body">
+                    <h3>MOBA (Multiplayer Online Battle Arena)</h3>
+                    <p>Duas equipes de cinco jogadores competem para destruir a base adversária. Cada jogador controla um herói com habilidades únicas, exigindo estratégia e coordenação. <strong>League of Legends</strong> é o maior expoente mundial.</p>
+                </div>
+            </div>
+            <div class="topic">
+                <div class="topic-num">3</div>
+                <div class="topic-body">
+                    <h3>Fighting Games (Jogos de Luta)</h3>
+                    <p>Combates individuais em rounds, utilizando combos, defesas e leitura de movimentos. É um dos gêneros mais tradicionais dos e-sports, com eventos icônicos como o Evolution Championship Series (Evo).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE SÃO GAMES -->
+    <section class="what-is">
+        <h2 class="section-title-center">O que são games?</h2>
+        <div class="images-row">
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=500" alt="Games Competitivos">
+                <p class="card-label">ESPORTES ELETRÔNICOS</p>
+                <p>Competições profissionais de videogame que reúnem equipes, patrocinadores e torcedores em arenas e transmissões online. Em 2023, o mercado global de e-sports ultrapassou US$ 1 bilhão.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=500" alt="Games Imersivos">
+                <p class="card-label">CRESCIMENTO ACELERADO</p>
+                <p>A audiência de e-sports já supera 500 milhões de pessoas, com eventos como a Fortnite World Cup oferecendo premiações de US$ 30 milhões e transformando jovens em atletas digitais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLASH ROYALE ========== -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1614680376739-414d95ff8df0?q=80&w=1400" alt="Clash Royale competitivo" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>Clash Royale</h2>
+            <p class="divider-sub">Estratégia em tempo real e cartas colecionáveis</p>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <h2 class="section-title-center">Cenário competitivo</h2>
+        <div class="images-row">
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=500" alt="Clash Royale League">
+                <p class="card-label">CLASH ROYALE LEAGUE (CRL)</p>
+                <p>O principal circuito competitivo do jogo, dividido em regiões (América, Europa, Ásia). Equipes profissionais como Team Liquid, SK Gaming e Nova Esports disputam temporadas regulares, culminando em finais mundiais com premiações expressivas.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=500" alt="Crown Championship">
+                <p class="card-label">CROWN CHAMPIONSHIP 2017</p>
+                <p>O primeiro mundial oficial da Supercell foi vencido por Surgical Goblin em Londres. Desde então, a CRL se consolidou como referência, revelando talentos como Mohamed Light e Morten, que dominaram o cenário com estratégias inovadoras.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BRAWL STARS ========== -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1400" alt="Brawl Stars World Finals" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>Brawl Stars</h2>
+            <p class="divider-sub">Ação 3v3 com personagens únicos</p>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <h2 class="section-title-center">Cenário competitivo</h2>
+        <div class="images-row">
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=500" alt="Brawl Stars Championship">
+                <p class="card-label">BRAWL STARS CHAMPIONSHIP (BSC)</p>
+                <p>Circuito oficial com fases: classificatórias abertas, finais mensais e mundial. O formato permite que jogadores amadores subam ao estrelato. Em 2019, a Nova Esports conquistou o primeiro título mundial.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=500" alt="Ícones do Brawl Stars">
+                <p class="card-label">ÍCONES DO CENÁRIO</p>
+                <p>Atletas como Sitetampo (criatividade), Achapi (ZETA Division) e Tensai (considerado o melhor do mundo) são referências. O BSC já distribuiu milhões de dólares em prêmios e elevou o jogo ao patamar de e-sport global.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STREET FIGHTER ========== -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?q=80&w=1400" alt="Street Fighter VI" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1605902711622-cfb43c44367f?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>Street Fighter</h2>
+            <p class="divider-sub">A lenda dos jogos de luta</p>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <h2 class="section-title-center">Cenário competitivo</h2>
+        <div class="images-row">
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1616588589676-62b3bd8b4b3d?q=80&w=500" alt="Capcom Pro Tour">
+                <p class="card-label">CAPCOM PRO TOUR</p>
+                <p>Circuito mundial oficial que reúne os melhores jogadores do planeta. O ano termina com a Capcom Cup, onde o campeão leva premiações de centenas de milhares de dólares e o título de melhor do mundo.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1585079542156-2755d9c8a094?q=80&w=500" alt="Evolution Championship Series">
+                <p class="card-label">EVOLUTION CHAMPIONSHIP SERIES (EVO)</p>
+                <p>O torneio mais prestigiado dos jogos de luta, realizado anualmente em Las Vegas. Atrai mais de 10 mil competidores de diversos países. Street Fighter é a atração principal, com momentos históricos como o "Evo Moment #37".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEAGUE OF LEGENDS ========== -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1400" alt="League of Legends Worlds" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>League of Legends</h2>
+            <p class="divider-sub">O gigante dos MOBAs</p>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <h2 class="section-title-center">Cenário competitivo</h2>
+        <div class="images-row">
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=500" alt="World Championship">
+                <p class="card-label">WORLD CHAMPIONSHIP (WORLDS)</p>
+                <p>O evento mais assistido dos e-sports. Desde o primeiro mundial em 2011 (vencido pela Fnatic), o torneio cresceu exponencialmente. Em 2023, a final ultrapassou 6 milhões de espectadores simultâneos. A premiação ultrapassa US$ 2 milhões e o troféu é o sonho de todo profissional.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=500" alt="Ligas Regionais">
+                <p class="card-label">LIGAS REGIONAIS</p>
+                <p>O ecossistema competitivo é dividido em ligas como LCK (Coreia), LEC (Europa), LPL (China) e CBLOL (Brasil). Os melhores times de cada liga se classificam para o Mundial. A estrutura profissional inclui salários, arenas dedicadas e uma base de fãs apaixonada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GRANDES NOMES DA ÁREA ========== -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1400" alt="Jogadores lendários" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>Grandes Nomes da Área</h2>
+            <p class="divider-sub">Ícones que marcaram a história dos e-sports</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE JOGADORES -->
+    <section class="players-section">
+        <div class="players-grid">
+            <div class="player-card">
+                <div class="player-avatar">
+                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=300" alt="Faker" style="object-fit: cover;">
+                    <div class="avatar-ring"></div>
+                </div>
+                <p class="player-name">FAKER</p>
+                <p class="player-desc">Lee Sang-hyeok, o "Deus do League of Legends", tricampeão mundial e considerado o maior jogador da história do LoL.</p>
+            </div>
+            <div class="player-card">
+                <div class="player-avatar">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300" alt="Daigo Umehara" style="object-fit: cover;">
+                    <div class="avatar-ring"></div>
+                </div>
+                <p class="player-name">DAIGO UMEHARA</p>
+                <p class="player-desc">Lenda do Street Fighter, autor do "Evo Moment #37" e vencedor de múltiplos títulos internacionais.</p>
+            </div>
+            <div class="player-card">
+                <div class="player-avatar">
+                    <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=300" alt="Bugha" style="object-fit: cover;">
+                    <div class="avatar-ring"></div>
+                </div>
+                <p class="player-name">BUGHA</p>
+                <p class="player-desc">Kyle Giersdorf, campeão da Fortnite World Cup 2019, levou US$ 3 milhões e se tornou um dos maiores nomes do battle royale.</p>
+            </div>
+            <div class="player-card">
+                <div class="player-avatar">
+                    <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=300" alt="SonicFox" style="object-fit: cover;">
+                    <div class="avatar-ring"></div>
+                </div>
+                <p class="player-name">SONICFOX</p>
+                <p class="player-desc">Dominador de jogos de luta como Mortal Kombat e Injustice, múltiplas vezes campeão do Evo e ícone da comunidade LGBTQIA+.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO ENTRAR NO CENÁRIO (VERSÃO DESCRITIVA E INFORMATIVA) -->
+    <section class="hero-divider">
+        <div class="divider-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1400" alt="Como entrar no cenário" class="divider-img" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400'">
+        <div class="divider-text">
+            <h2>Como entrar no cenário?</h2>
+            <p class="divider-sub">Descubra o caminho para se tornar um atleta de e-sports, com dicas práticas e realistas</p>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h3>Escolha seu jogo e se dedique de verdade</h3>
+                <p>O primeiro passo é encontrar o título que realmente te motiva. Não adianta escolher um jogo apenas porque ele é popular — você precisa ter paixão por ele. Dedique-se a estudar as mecânicas, assista a partidas de alto nível, aprenda com os melhores e pratique diariamente. Defina metas claras, como alcançar um ranking específico ou dominar um personagem. Lembre-se: consistência é mais importante que talento bruto.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h3>Sub no ranking e construa sua reputação</h3>
+                <p>Para ser notado, você precisa estar entre os melhores. Alcance os rankings mais altos (como Mestre, Desafiante ou topo do ladder global) e mantenha um bom desempenho consistente. Use isso como sua vitrine. Grave suas partidas, analise erros e refine sua estratégia. Muitos olheiros de equipes monitoram as classificações — seu nome no topo é o primeiro passo para ser convidado para testes ou torneios.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h3>Participe de torneios e ganhe visibilidade</h3>
+                <p>Comece por campeonatos online abertos, muitos deles organizados pelas próprias desenvolvedoras ou plataformas como Battlefy e ESL. Torneios classificatórios são a porta de entrada para ligas maiores. Mesmo que você não vença de imediato, a experiência competitiva é valiosa. Além disso, divulgar suas participações nas redes sociais e até mesmo fazer transmissões ao vivo (streaming) pode chamar a atenção de equipes e patrocinadores.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h3>Entre em uma equipe e profissionalize-se</h3>
+                <p>Com resultados sólidos e visibilidade, você será observado por organizações. Esteja preparado para testes e entrevistas. Ao ingressar em uma equipe, você terá acesso a treinadores, estrutura de treino, suporte financeiro e oportunidades em campeonatos de alto nível. Lembre-se: além de habilidade, o profissionalismo (pontualidade, trabalho em equipe, conduta) é essencial para se manter no cenário.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">🎮 Game System</span>
+            <p>© 2026 - Game System. Todos os direitos reservados. | Conteúdo baseado em pesquisas acadêmicas e fontes oficiais de e-sports.</p>
+            <div class="footer-links">
+                <a href="#">Fontes</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMobile');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
