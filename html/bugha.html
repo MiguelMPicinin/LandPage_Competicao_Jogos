@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game System | Cenário Competitivo de Esports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">🎮</div>
+            <h1 class="logo-text">Game System</h1>
+        </div>
+        <nav class="nav-desktop">
+            <a href="#">Início</a>
+            <a href="#">Games</a>
+            <a href="#">E-Sports</a>
+            <a href="#">Cenário</a>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    </header>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">🎮 Game System</span>
+            <p>© 2026 - Game System. Todos os direitos reservados. | Conteúdo baseado em pesquisas acadêmicas e fontes oficiais de e-sports.</p>
+            <div class="footer-links">
+                <a href="#">Fontes</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMobile');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+</body>
