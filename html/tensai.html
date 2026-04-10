@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game System | Jogador</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER (REUTILIZADO) -->
+<header>
+    <div class="logo-container">
+        <div class="logo-icon">🎮</div>
+        <h1 class="logo-text">Game System</h1>
+    </div>
+    <nav class="nav-desktop">
+        <a href="../index.html">Início</a>
+        <a href="#">Games</a>
+        <a href="#">E-Sports</a>
+        <a href="#">Cenário</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav class="nav-mobile" id="navMobile">
+    <a href="../index.html" onclick="toggleMenu()">Início</a>
+    <a href="#" onclick="toggleMenu()">Games</a>
+    <a href="#" onclick="toggleMenu()">E-Sports</a>
+    <a href="#" onclick="toggleMenu()">Cenário</a>
+</nav>
+
+<!-- HERO DO JOGADOR -->
+<section class="player-hero">
+    <img src="../imagens/faker-bg.jpg" alt="Background jogador">
+    <div class="player-hero-content">
+        <h1 class="player-hero-name">FAKER</h1>
+        <p class="player-hero-role">League of Legends • Mid Laner</p>
+    </div>
+</section>
+
+<!-- DETALHES -->
+<section class="player-details">
+
+    <div class="player-info-grid">
+
+        <!-- FOTO -->
+        <img src="../imagens/faker.jpg" class="player-photo">
+
+        <!-- BIO -->
+        <div class="player-bio">
+            <h3>Sobre o jogador</h3>
+            <p>
+                Faker é considerado o maior jogador da história do League of Legends.
+                Conhecido por sua mecânica absurda e inteligência de jogo, ele dominou o cenário mundial por anos.
+            </p>
+
+            <h3>Carreira</h3>
+            <p>
+                Estreou pela SK Telecom T1 e rapidamente conquistou o mundo.
+                Seus títulos mundiais e consistência o tornaram um ícone dos e-sports.
+            </p>
+
+            <!-- STATS -->
+            <div class="player-stats">
+                <div class="stat"><strong>Nome real:</strong> Lee Sang-hyeok</div>
+                <div class="stat"><strong>Nacionalidade:</strong> Coreia do Sul</div>
+                <div class="stat"><strong>Títulos mundiais:</strong> 3</div>
+                <div class="stat"><strong>Time:</strong> T1</div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- DIVISOR -->
+<section class="hero-divider">
+    <div class="divider-overlay"></div>
+    <img src="../imagens/lol.jpg" class="divider-img">
+    <div class="divider-text">
+        <h2>Momentos marcantes</h2>
+        <p class="divider-sub">Jogadas históricas e conquistas</p>
+    </div>
+</section>
+
+<!-- MOMENTOS -->
+<section class="presentation">
+    <div class="images-row">
+
+        <div class="img-card">
+            <img src="../imagens/faker1.jpg">
+            <p class="card-label">ZED VS ZED</p>
+            <p>Uma das jogadas mais famosas da história do League of Legends.</p>
+        </div>
+
+        <div class="img-card">
+            <img src="../imagens/faker2.jpg">
+            <p class="card-label">TÍTULO MUNDIAL</p>
+            <p>Domínio absoluto no cenário competitivo mundial.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-logo">🎮 Game System</span>
+        <p>© 2026 - Game System</p>
+        <div class="footer-links">
+            <a href="#">Contato</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById('navMobile').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

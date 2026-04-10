@@ -788,4 +788,99 @@ footer p {
         font-size: 0.95rem;
         line-height: 1.5;
     }
+    /* ===========================
+   PLAYER DETAILS (NOVA PÁGINA)
+=========================== */
+
+.player-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(280px, 50vw, 420px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.player-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.35);
+}
+
+.player-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.player-hero-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(26px, 6vw, 60px);
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 25px rgba(123,47,255,0.8);
+}
+
+.player-hero-role {
+    color: var(--ciano);
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+.player-details {
+    padding: var(--padding-section) var(--padding-h);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.player-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 4vw, 40px);
+}
+
+.player-photo {
+    border-radius: 6px;
+    border: 1px solid rgba(0,229,255,0.2);
+}
+
+.player-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.player-bio h3 {
+    color: var(--ciano);
+    letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.player-stats {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.stat {
+    background: rgba(255,255,255,0.03);
+    padding: 12px;
+    border-left: 3px solid var(--roxo);
+}
+
+.stat strong {
+    color: var(--ciano);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .player-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
 }
