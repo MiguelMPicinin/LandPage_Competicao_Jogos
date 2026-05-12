@@ -1,179 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tensai - Pro Player</title>
-
-<style>
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* CORES */
-:root {
-  --preto: #000;
-  --roxo: #7b2fff;
-  --ciano: #00e5ff;
-  --cinza: #aaa;
-  --branco: #fff;
-}
-
-/* BODY */
-body {
-  background: var(--preto);
-  color: var(--branco);
-  font-family: Arial, sans-serif;
-}
-
-/* HERO */
-header {
-  position: relative;
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #4a0080, #0d0d2b);
-}
-
-header h1 {
-  font-size: clamp(32px, 8vw, 70px);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 0 0 20px var(--roxo);
-}
-
-header p {
-  margin-top: 10px;
-  color: var(--ciano);
-  letter-spacing: 2px;
-}
-
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: linear-gradient(90deg, var(--ciano), var(--roxo));
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--ciano);
-}
-
-/* SEÇÕES */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* TITULOS */
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  color: var(--ciano);
-}
-
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(123,47,255,0.3);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: rgba(123,47,255,0.1);
-  border-color: var(--ciano);
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0d0d2b;
-  border-top: 2px solid var(--ciano);
-  color: var(--cinza);
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 30px;
-  }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicFox - Mortal Kombat | Game System</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
+<body class="player-profile-page">
 
-<body>
+<div class="profile-header" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070');">
+    <h1>SONICFOX</h1>
+    <p>O Dominador da EVO</p>
+    <a href="../index.html" class="back-home">← Voltar</a>
+</div>
 
-<header>
-  <h1>Tensai</h1>
-  <p>O cérebro por trás das vitórias mundiais</p>
-  <a href="#sobre" class="btn">Conheça mais</a>
-</header>
+<div class="profile-container">
+    <div class="profile-section animate-on-scroll">
+        <h2>Trajetória extraordinária</h2>
+        <div class="profile-card">
+            <p>SonicFox é o jogador de luta mais condecorado da história, com múltiplos títulos da EVO em Mortal Kombat, Injustice e Dragon Ball FighterZ. Conhecido por seu estilo agressivo e "reads" (leituras de movimento) absurdos, ele dominou a NetherRealm Studios cena por anos. Além disso, é um ativista assumido da comunidade LGBTQIA+ e frequentemente aparece em eventos com máscaras de animais, quebrando estereótipos e inspirando jovens jogadores a serem autênticos. Sua rivalidade com Dragon é uma das mais épicas dos fighting games.</p>
+        </div>
+    </div>
 
-<section id="sobre">
-  <h2>Sobre</h2>
-  <div class="card">
-    <p>
-      Tensai é um jogador profissional de Brawl Stars japonês,
-      considerado um dos melhores do mundo (GOAT).
-      Tricampeão mundial (2021, 2022, 2025),
-      atualmente joga pela equipe Crazy Raccoon.
-    </p>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Conquistas de destaque</h2>
+        <div class="stats-grid">
+            <div class="stat-item"><span class="stat-number">3x EVO</span><br>Campeão de Mortal Kombat (2015, 2019, 2021)</div>
+            <div class="stat-item"><span class="stat-number">Injustice 2</span><br>Campeão mundial invicto</div>
+            <div class="stat-item"><span class="stat-number">MVP</span><br>Mortal Kombat Pro Kompetition 2020</div>
+        </div>
+    </div>
 
-<section>
-  <h2>Conquistas</h2>
-  <div class="grid">
-    <div class="card">🏆 Campeão Mundial 2021</div>
-    <div class="card">🏆 Campeão Mundial 2022</div>
-    <div class="card">🌍 Domínio global com ZETA DIVISION</div>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Estilo de luta</h2>
+        <div class="profile-card">
+            <p>Conhecido por pressionar até o último frame, misturar overheads e lows perfeitamente, e executar combos que retiram mais de 60% da barra de vida. Sua leitura de oponente é sobrenatural – frequentemente antecipa throws e wake-ups, punindo com fatalidades. Ele também é um mestre na gestão de recursos (barras ofensiva/defensiva) e no "mind game" do neutral game.</p>
+        </div>
+    </div>
 
-<section>
-  <h2>Estilo de Jogo</h2>
-  <div class="grid">
-    <div class="card">🎯 Posicionamento perfeito</div>
-    <div class="card">🧠 Estratégia avançada</div>
-    <div class="card">⚡ Decisão rápida</div>
-    <div class="card">🤝 Trabalho em equipe</div>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Grandes finais históricos</h2>
+        <div class="videos-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/rH4Q0G9mRHY" title="SonicFox vs Dragon EVO 2019" loading="lazy"></iframe>
+                <p>SonicFox vs Dragon - Final EVO 2019 (MK11) - a virada espetacular</p>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/fnVpoq7_wHw" title="SonicFox Documentary" loading="lazy"></iframe>
+                <p>Documentário: a trajetória do maior vencedor da EVO, dentro e fora das telas</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<section>
-  <h2>Quer jogar como um profissional?</h2>
-  <div class="card">
-    <p>
-      Aprenda com os campeões mundiais e evolua sua gameplay.
-    </p>
-    <a href="#" class="btn">Começar agora</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 - Game System
+<footer class="page-footer">
+    <p>© 2026 - Game System | SonicFox - Quebrando recordes e barreiras, lenda dos fighting games</p>
 </footer>
 
 </body>

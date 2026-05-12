@@ -1,179 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tensai - Pro Player</title>
-
-<style>
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* CORES */
-:root {
-  --preto: #000;
-  --roxo: #7b2fff;
-  --ciano: #00e5ff;
-  --cinza: #aaa;
-  --branco: #fff;
-}
-
-/* BODY */
-body {
-  background: var(--preto);
-  color: var(--branco);
-  font-family: Arial, sans-serif;
-}
-
-/* HERO */
-header {
-  position: relative;
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #4a0080, #0d0d2b);
-}
-
-header h1 {
-  font-size: clamp(32px, 8vw, 70px);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 0 0 20px var(--roxo);
-}
-
-header p {
-  margin-top: 10px;
-  color: var(--ciano);
-  letter-spacing: 2px;
-}
-
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: linear-gradient(90deg, var(--ciano), var(--roxo));
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--ciano);
-}
-
-/* SEÇÕES */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* TITULOS */
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  color: var(--ciano);
-}
-
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(123,47,255,0.3);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: rgba(123,47,255,0.1);
-  border-color: var(--ciano);
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0d0d2b;
-  border-top: 2px solid var(--ciano);
-  color: var(--cinza);
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 30px;
-  }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faker - Lenda do LoL | Game System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
+<body class="player-profile-page">
 
-<body>
+<div class="profile-header" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070');">
+    <h1>FAKER</h1>
+    <p>O Deus do League of Legends</p>
+    <a href="../index.html" class="back-home">← Voltar ao início</a>
+</div>
 
-<header>
-  <h1>Tensai</h1>
-  <p>O cérebro por trás das vitórias mundiais</p>
-  <a href="#sobre" class="btn">Conheça mais</a>
-</header>
+<div class="profile-container">
+    <div class="profile-section animate-on-scroll">
+        <h2>Trajetória</h2>
+        <div class="profile-card">
+            <p>Lee Sang-hyeok, conhecido como Faker, é um jogador profissional sul-coreano de League of Legends. Desde sua estreia em 2013 pela T1 (então SK Telecom T1), revolucionou o cenário com mecânicas impecáveis e visão de jogo incomparável. Tricampeão mundial (2013, 2015, 2016) e bicampeão do Mid-Season Invitational (2016, 2017), é amplamente considerado o maior jogador da história do LoL. Seu contrato vitalício com a T1 simboliza sua lealdade e impacto duradouro. Além disso, Faker é conhecido por sua humildade, ética de trabalho e por inspirar milhões de fãs ao redor do globo.</p>
+        </div>
+    </div>
 
-<section id="sobre">
-  <h2>Sobre</h2>
-  <div class="card">
-    <p>
-      Tensai é um jogador profissional de Brawl Stars japonês,
-      considerado um dos melhores do mundo (GOAT).
-      Tricampeão mundial (2021, 2022, 2025),
-      atualmente joga pela equipe Crazy Raccoon.
-    </p>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Conquistas</h2>
+        <div class="stats-grid">
+            <div class="stat-item"><span class="stat-number">3x</span><br>Campeão Mundial (2013, 2015, 2016)</div>
+            <div class="stat-item"><span class="stat-number">10x</span><br>LCK Champion (incluindo 2023)</div>
+            <div class="stat-item"><span class="stat-number">2x</span><br>MSI Champion (2016, 2017)</div>
+            <div class="stat-item"><span class="stat-number">1x</span><br>Asian Games Medalha de Ouro (2023)</div>
+        </div>
+    </div>
 
-<section>
-  <h2>Conquistas</h2>
-  <div class="grid">
-    <div class="card">🏆 Campeão Mundial 2021</div>
-    <div class="card">🏆 Campeão Mundial 2022</div>
-    <div class="card">🌍 Domínio global com ZETA DIVISION</div>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Estilo de Jogo</h2>
+        <div class="profile-card">
+            <p>Faker é conhecido por sua enorme pool de campeões (mais de 70 picks diferentes em competições), reações sobre-humanas e capacidade de carregar jogadas impossíveis. Seu Zed, Leblanc, Ryze, Azir e Akali são referências mundiais. Além disso, é mestre em rotação de mapa, controle de visão e pressão em equipe. Mesmo após mais de uma década, continua evoluindo e adaptando seu estilo, provando que a excelência não tem idade nos e-sports.</p>
+        </div>
+    </div>
 
-<section>
-  <h2>Estilo de Jogo</h2>
-  <div class="grid">
-    <div class="card">🎯 Posicionamento perfeito</div>
-    <div class="card">🧠 Estratégia avançada</div>
-    <div class="card">⚡ Decisão rápida</div>
-    <div class="card">🤝 Trabalho em equipe</div>
-  </div>
-</section>
+    <div class="profile-section">
+        <h2>Momentos ICÔNICOS</h2>
+        <div class="videos-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/Ia7d9IbLuM4" title="Faker Zed Outplay vs Ryu" loading="lazy"></iframe>
+                <p>Faker vs Ryu - O outplay lendário com Zed (LCK 2013) que definiu uma era</p>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/v4T9XJVQlNY" title="Faker Worlds 2016 Highlights" loading="lazy"></iframe>
+                <p>Highlights do Worlds 2016 - Faker com LeBlanc dominando a competição</p>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/9kf0FENa8wY" title="Faker 1v1 no All-Star" loading="lazy"></iframe>
+                <p>Faker no All-Star 1v1 - Mecânica pura e leitura de cooldowns</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<section>
-  <h2>Quer jogar como um profissional?</h2>
-  <div class="card">
-    <p>
-      Aprenda com os campeões mundiais e evolua sua gameplay.
-    </p>
-    <a href="#" class="btn">Começar agora</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 - Game System
+<footer class="page-footer">
+    <p>© 2026 - Game System | Faker - Lenda eterna, o maior jogador de League of Legends de todos os tempos</p>
 </footer>
 
 </body>
