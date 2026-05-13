@@ -446,7 +446,11 @@
         });
     });
 
-    // EFEITO LETRA POR LETRA (Typewriter)
+    // ===================================================
+    // EFEITO TYPEWRITER CORRIGIDO
+    // Revela o HTML caractere a caractere, preservando
+    // espaços e tags como <strong> corretamente.
+    // ===================================================
     const textBlocks = document.querySelectorAll('.typewriter-text');
 
     const observer = new IntersectionObserver((entries) => {
@@ -454,22 +458,48 @@
             if (entry.isIntersecting && !entry.target.getAttribute('data-typed')) {
                 const el = entry.target;
                 el.setAttribute('data-typed', 'true');
-                const originalText = el.innerText;
-                el.innerText = '';
-                const chars = originalText.split('');
-                let i = 0;
-                function addChar() {
-                    if (i < chars.length) {
-                        const span = document.createElement('span');
-                        span.textContent = chars[i];
-                        span.style.animationDelay = `${i * 0.02}s`;
-                        el.appendChild(span);
-                        i++;
-                        setTimeout(addChar, 10);
-                    }
-                }
-                addChar();
+
+                // Guarda o HTML original completo (com tags <strong>, etc.)
+                const originalHTML = el.innerHTML;
+
+                // Limpa o elemento e marca como revelado (para transição de opacidade)
+                el.innerHTML = '';
                 el.classList.add('revealed');
+
+                // Itera pelo HTML original caractere a caractere
+                const chars = originalHTML.split('');
+                let i = 0;
+                let inTag = false;
+                let tagBuffer = '';
+
+                function addChar() {
+                    if (i >= chars.length) return;
+
+                    const c = chars[i];
+
+                    if (c === '<') {
+                        // Início de uma tag HTML — acumula até fechar
+                        inTag = true;
+                        tagBuffer = c;
+                    } else if (inTag) {
+                        tagBuffer += c;
+                        if (c === '>') {
+                            // Tag completa: insere de uma vez (sem delay extra)
+                            inTag = false;
+                            el.innerHTML += tagBuffer;
+                            tagBuffer = '';
+                        }
+                    } else {
+                        // Caractere normal (texto, espaço, pontuação…)
+                        // Usa textNode para preservar espaços sem colapsar
+                        el.appendChild(document.createTextNode(c));
+                    }
+
+                    i++;
+                    setTimeout(addChar, 2); // 2ms por caractere
+                }
+
+                addChar();
                 observer.unobserve(el);
             }
         });

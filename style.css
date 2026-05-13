@@ -1002,7 +1002,7 @@ footer p {
 }
 
 /* ===================================================
-   ANIMAÇÕES EXISTENTES
+   ANIMAÇÕES
 =================================================== */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -1094,9 +1094,6 @@ img {
     box-shadow: 0 12px 30px rgba(123, 47, 255, 0.3);
 }
 
-/* ===================================================
-   EFEITO LETRA POR LETRA (TYPEWRITER ACELERADO)
-=================================================== */
 .typewriter-text {
     opacity: 0;
     transform: translateY(10px);
@@ -1106,14 +1103,4 @@ img {
 .typewriter-text.revealed {
     opacity: 1;
     transform: translateY(0);
-}
-
-.typewriter-text span {
-    display: inline-block;
-    animation: fadeInChar 0.008s forwards;
-}
-
-@keyframes fadeInChar {
-    from { opacity: 0; transform: translateY(2px); }
-    to   { opacity: 1; transform: translateY(0); }
 }
