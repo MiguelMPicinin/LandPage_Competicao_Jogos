@@ -6,3 +6,4 @@ Página web sobre o cenário competitivo dos e-sports desenvolvida com HTML e CS
 
 - HTML
 - CSS
+- JavaScript
